@@ -58,8 +58,8 @@ class Meme extends Component{
                 </form>
                 <div >
                     <img src={this.state.imageurl} style={{display:"inline",height:"300px",width:"200px"}} alt="" />
-                    <div className="top" style={{float:"right",marginRight:"100px"}}>{this.state.toptext}</div>
-                    <h2 className="bottom">{this.state.bottomtext}</h2>
+                    <div  style={{float:"right",marginRight:"100px"}}>{this.state.toptext}</div>
+                    <div style={{float:"right",marginRight:"100px"}}>{this.state.bottomtext}</div>
                 </div>
       </div>
     )
