@@ -13,7 +13,7 @@ class Meme extends Component{
     this.handleSubmit=this.handleSubmit.bind(this)
   }
   componentDidMount() {
-        fetch("https://api.imgflip.com/")
+        fetch("https://api.imgflip.com/get_memes")
             .then(response => response.json())
             .then(response => {
                 const {memes} = response.data
