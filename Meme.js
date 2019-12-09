@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import { render } from 'react-dom';
+import './style.css'
 class Meme extends Component{
   constructor(){
     super();
@@ -38,7 +39,7 @@ class Meme extends Component{
   render(){
     return(
      <div>
-                <form onSubmit={this.handleSubmit}>
+                <form className="meme-form" onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
                         name="toptext"
@@ -56,10 +57,10 @@ class Meme extends Component{
                 
                     <button >Gen</button>
                 </form>
-                <div >
-                    <img src={this.state.imageurl} style={{display:"inline",height:"300px",width:"200px"}} alt="" />
-                    <div  style={{float:"right",marginRight:"100px"}}>{this.state.toptext}</div>
-                    <div style={{float:"right",marginRight:"100px"}}>{this.state.bottomtext}</div>
+                <div className="meme" >
+                    <img src={this.state.imageurl} alt="" />
+                    <h2  className="top">{this.state.toptext}</h2>
+                    <h2 className="bottom">{this.state.bottomtext}</h2>
                 </div>
       </div>
     )
